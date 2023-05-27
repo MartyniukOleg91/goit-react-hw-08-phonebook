@@ -1,3 +1,5 @@
+@import-normalize; /* bring in normalize.css styles */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +21,7 @@ ol {
   list-style: none;
 }
 
+
 a {
   outline: none;
   text-decoration: none;
@@ -33,5 +36,5 @@ a:visited {
   color: #fff3cc;
 }
 a:hover {
-  color: #ffd972;
+    color: #ffd972;
 }

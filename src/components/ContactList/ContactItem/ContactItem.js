@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import css from './ContactItem.module.css';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../../store/contacts/contactsAPI';
+import { deleteContact } from 'redux/contacts/contactsOperation';
 
 export default function ContactItem({ id, name, number }) {
   const dispatch = useDispatch();

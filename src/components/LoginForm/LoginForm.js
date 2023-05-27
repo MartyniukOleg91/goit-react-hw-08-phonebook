@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'store/auth/operations';
+import { logIn } from 'redux/auth/operations';
 import css from './LoginForm.module.css';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,7 @@ export const LoginForm = () => {
         password: form.elements.password.value,
       })
     );
-
+    
     form.reset();
   };
 
