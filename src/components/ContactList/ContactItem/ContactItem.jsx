@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import css from './ContactItem.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../../store/contacts/contactsAPI';
 
@@ -9,12 +9,11 @@ export default function ContactItem({ id, name, number }) {
 
   const handleDelete = () => dispatch(deleteContact(id));
   return (
-    <li>
+    <li className={css.contactItem}>
       <span>
-        {name}
-        {number}
+        {name} <a href={`tel:${number}`}>{number}</a>
       </span>
-      <button type="button" onClick={handleDelete}>
+      <button className={css.btnDelete} type="button" onClick={handleDelete}>
         Delete
       </button>
     </li>
